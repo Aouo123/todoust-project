@@ -13,13 +13,20 @@
 <body>
     <h1>代辦事項</h1>
     {% for todo in todos %}
-    <h2>{{todo.title}}</h2>
     <small>{{todo.created}}</small>
-    <li>{{todo.text}}</li>
-    {% if todo.important %}
-    <p style="color: red;">重要</p>
-    {% endif %}
-    <hr>
+    
+        <h1>{{todo.id}}</h1>
+        <h2>
+            <a href="{% url 'viewtodo' todo.id %}">{{todo.title}}</a>
+        </h2>
+        {% if todo.text %}
+            <li>{{todo.text}}</li>
+        {% endif %}
+        {% if todo.important %}
+            <p style="color: red;">重要</p>
+        {% endif %}
+        <hr>
     {% endfor %}
+    
 </body>
 </html>

@@ -7,6 +7,7 @@ from django.contrib.auth import login, logout, authenticate
 
 def user_login(request):
     message = ""
+    username = ""
     if request.method == "POST":
         username = request.POST.get ('username')
         password = request.POST.get ('password')
@@ -19,7 +20,10 @@ def user_login(request):
             message = "登入成功!"
             return redirect("todolist")
 
-    return render(request, "user/login.html", {"message": message})
+    return render(request, 
+                  "user/login.html", 
+                  {"message": message, 
+                  "username": username})
 
 
 def user_register(request):

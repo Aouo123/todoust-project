@@ -5,6 +5,7 @@ from .models import Todo
 def todolist(request):
     user = request.user
     todos = Todo.objects.all()
+    todos = Todo.objects.filter()
     #get 唯一 ， filter 篩選
     #todos = Todo.objects.filter(id=2)
     print(todos)

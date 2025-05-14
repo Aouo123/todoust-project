@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TodoList</title>
-    <style>
-        body{
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}
+    代辦事項
+{% endblock %}
+{% block content %}
     {{user.username}}
-    {{user.emall}}
+    {{user.email}}
     <h1>代辦事項</h1>
     {% for todo in todos %}
     <small>{{todo.created}}</small>
@@ -29,6 +21,4 @@
         {% endif %}
         <hr>
     {% endfor %}
-    
-</body>
-</html>
+{% endblock %}

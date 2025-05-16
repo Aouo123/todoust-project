@@ -6,6 +6,15 @@
     {{user.username}}
     {{user.email}}
     <h1>代辦事項</h1>
+    <hr>
+    {% if not todos %}
+    <h2 style="color: red">
+        請先
+        <a href="{% url 'login' %}">登入</a>
+        或
+        <a href="{% url 'register' %}">註冊</a>
+    </h2>
+    {% endif %}
     {% for todo in todos %}
     <small>{{todo.created}}</small>
     

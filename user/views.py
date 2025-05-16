@@ -51,6 +51,7 @@ def user_register(request):
                 User.objects.create_user(
                     username=username, password=password1).save()
                 message = "註冊成功!"
+                return redirect("login")
     else:
         form = UserCreationForm()
 

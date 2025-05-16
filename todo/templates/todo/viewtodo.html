@@ -9,6 +9,13 @@
         編號錯誤，請重新輸入
     </h3>
     {% else %}
-    {{todo}}
+    <h2>{{todo.title}}</h2>
     {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">更新</button>
+    </form>
+    {{message}}
 {% endblock %}

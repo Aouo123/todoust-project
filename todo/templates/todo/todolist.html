@@ -18,16 +18,21 @@
     {% for todo in todos %}
     <small>{{todo.created}}</small>
     
-        <h1>{{todo.id}}</h1>
         <h2>
             <a href="{% url 'viewtodo' todo.id %}">{{todo.title}}</a>
         </h2>
         {% if todo.text %}
-            <li>{{todo.text}}</li>
+            <li>{{todo.text|linebreaks}}</li>
         {% endif %}
         {% if todo.important %}
             <p style="color: red;">重要</p>
         {% endif %}
+        {% if todo.date_completed %}
+            <p style="color: rgb(9, 154, 211);">{{date_completed}}</p>
+        {% endif %}
+        <h2>
+            <a href="{% url 'deletetodo' todo.id %}">刪除</a>
+        </h2>
         <hr>
     {% endfor %}
 {% endblock %}

@@ -9,6 +9,7 @@ class Todo(models.Model):
     date_completed = models.DateTimeField( null = True, blank = True ) #null=True(可以為空物件型態)
     important = models.BooleanField( default = False)
     user = models.ForeignKey(User, on_delete = models.CASCADE)
+    completed = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.id} - {self.title} - {self.created}"

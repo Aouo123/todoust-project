@@ -20,7 +20,7 @@ from .views import todolist, viewtodo, createtodo, deletetodo
 
 urlpatterns = [
     path("", todolist, name="todolist"),
-    path("view123/<int:id>/", viewtodo, name="viewtodo"),
-    path("createtodo/", createtodo, name="createtodo"),
+    path("view/<int:id>/", viewtodo, name="viewtodo"),
+    path("create/", createtodo, name="createtodo"),
     path("delete/<int:id>/", deletetodo, name="deletetodo"),
 ]

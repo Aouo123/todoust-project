@@ -133,7 +133,7 @@ LANGUAGE_CODE = "zh-Hant"
 
 TIME_ZONE = "Asia/Taipei"
 
-USE_I18N = True
+USE_I18N = False
 
 USE_TZ = True
 

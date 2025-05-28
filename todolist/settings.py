@@ -101,7 +101,7 @@ DATABASES = {
         "NAME": "defaultdb",
         "USER": "avnadmin",
         "PASSWORD": "AVNS_vuCxH5PwwaKJ67NQ2D7",
-        "HOST": "mysql-2c3802ff-toodlist.d.aivencloud.com",
+        "HOST": "mysql-2c3802ff-toodlist.d.aivencloud.com:28673",
         "PORT": 28669,
     }
 }
